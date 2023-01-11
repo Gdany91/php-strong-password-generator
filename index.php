@@ -11,14 +11,15 @@
    $pswLength = $_GET["psw-lngt"];
 
    require_once __DIR__ . "/helper.php";
+   
 
    ?>
 </head>
 <body>
-
+ 
     <form >
         <h2>Lunghezza Password:</h2>
-        <input type="number" name="psw-lngt">
+        <input type="number" name="psw-lngt"> 
         <input type="submit" value="GENERA">
        
         <h2>

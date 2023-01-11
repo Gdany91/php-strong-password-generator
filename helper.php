@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 function generatePassword($length) {
 
@@ -8,5 +10,11 @@ function generatePassword($length) {
         $password .= $chars[rand(0, strlen($chars) - 1)];
     }
     return $password;
+   
+    $_SESSION['mail'] = $mail;
 
+    header('location: pagePasw.php');
+
+    exit;
 }
+
