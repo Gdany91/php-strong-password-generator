@@ -10,6 +10,8 @@
    
    $pswLength = $_GET["psw-lngt"];
 
+   require_once __DIR__ . "/helper.php";
+
    ?>
 </head>
 <body>
@@ -18,18 +20,7 @@
         <h2>Lunghezza Password:</h2>
         <input type="number" name="psw-lngt">
         <input type="submit" value="GENERA">
-        <?php
-        function generatePassword($length) {
-
-            $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_[]{}<>~`+=,.;:/?|';
-            $password = '';
-            for ($i = 0; $i < $length; $i++) {
-                $password .= $chars[rand(0, strlen($chars) - 1)];
-            }
-            return $password;
-
-        }
-        ?>
+       
         <h2>
            <?= generatePassword($pswLength)?> 
         </h2>
